@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import Technologies from './Technologies';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './components/Header';
+import Navbar from './components/Nav';
+import Profile from './components/Profile';
 function App() {
   return (
-    <div>
-      <Header/>
-      <Technologies/>
-      <Footer/>
+    <div className='app-wrapper'>
+      <Header />
+      <Navbar />
+      <Profile />
     </div>
   );
 }
