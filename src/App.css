@@ -8,18 +8,5 @@
   grid-template-columns: 2fr 10fr;
 }
 
-.header{
-  grid-area: h;
-  background-color: green;
-}
-.header img{
-  width: 60px;
-}
-.nav{
-  grid-area: n;
-  background-color: orange;
-}
-.content{
-  grid-area: c;
-  background-color: rgb(235, 26, 228);
-}
+
+
