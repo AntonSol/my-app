@@ -7,13 +7,19 @@
  grid-template-columns: 2fr 10fr;
 } 
  .header {
-    grid-area: h
+    grid-area: h;
+    background-color: blue;
   }
   .navbar {
-    grid-area: n
+    grid-area: n;
+    background-color: rgb(16, 170, 75);
   }
   .content {
-    grid-area: c
+    grid-area: c;
+    background-color: rgb(211, 22, 22);
+    img{
+      width: 200px;
+    } 
   }
  
 
