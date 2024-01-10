@@ -5,7 +5,9 @@ const Posts =(props)=>{
     <div className={styles.item}>
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTENrybzcoLwKmAYneHO7i8TCuBYBCOLAPm8EpnNaxXXZeI6MT9xLvx0FmomOMURbkEqUY&usqp=CAU"></img>
        {props.message}
-       {props.like}
+       <div>
+       <span>like </span>{props.like}
+       </div>
         </div>
     )
 }
