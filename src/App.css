@@ -7,6 +7,9 @@
  grid-template-columns: 2fr 10fr;
 } 
 
-
+.app-wrapper-cont {
+  grid-area: c;
+  background-color: rgb(53, 126, 75);
+}
 
 
