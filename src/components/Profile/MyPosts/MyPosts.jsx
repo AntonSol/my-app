@@ -9,7 +9,6 @@ const MyPosts = () => {
         </div>
         <Posts message='Hi are you? 'like='10'/>
         <Posts message='Its my first post 'like='33'/>
-        <Posts />
     </div>
 }
 export default MyPosts
