@@ -2,6 +2,9 @@
   grid-area: n;
   background-color: rgb(166, 219, 18);
 }
-  .item {
-    color: rgb(43, 12, 12);
+  .item{
+    color: rgb(245, 243, 243);
+  }
+  .active {
+    color: rgb(235, 19, 19);
   }
