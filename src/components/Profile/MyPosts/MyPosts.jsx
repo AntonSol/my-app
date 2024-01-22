@@ -1,9 +1,11 @@
 import React from "react";
 import styles from './MyPosts.module.css'
 import Posts from "./Post/Posts";
+import ProfileInfo from "../ProfileInfo/ProfileInfo";
 const MyPosts = () => {
     return <div>
-        My posts
+       <div>
+       </div>
         <div>
             New posts
         </div>
