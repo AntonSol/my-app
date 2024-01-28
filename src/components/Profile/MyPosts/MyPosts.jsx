@@ -1,11 +1,9 @@
 import React from "react";
 import styles from './MyPosts.module.css'
-import Posts from "./Post/Posts";
-
 const MyPosts = (props) => {
-let postsElement=props.posts.map(posts=>(<div key={posts.id}>
-    {posts.message}
-    Likes:{posts.like}
+let postsElement=props.posts.map(posts=>(<div><div className={styles.post}>
+    {posts.message}</div>
+    <div className={styles.likes}> Likes:{posts.like}</div>
 </div>))
     return <div>
         <div>
