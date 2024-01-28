@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+let posts=[
+  {id:0, message:'Hi are you? ', like:12},
+  {id:1, message:'Its my first post ', like:1},
+  {id:2, message:'YOU ', like:15},
+]
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App posts={posts}/>
   </React.StrictMode>
 );
 

@@ -9,7 +9,8 @@ import News from './components/Profile/News/News';
 import Settings from './components/Profile/Settings/Settings';
 import Musik from './components/Profile/Musik/Musik';
 
-function App() {
+function App(props) {
+
   return (
     <BrowserRouter>
     <div className='app-wrapper'>
@@ -19,7 +20,7 @@ function App() {
         <Routes>
         <Route path='/news' element={<News/>}/>
         <Route path='/messages' element={<Dialogs/>}/>
-        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/profile' element={<Profile posts={props.posts}/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/musik' element={<Musik/>}/>
         </Routes>
