@@ -1,16 +1,18 @@
 import React from "react";
 import styles from './MyPosts.module.css'
 import Posts from "./Post/Posts";
-import ProfileInfo from "../ProfileInfo/ProfileInfo";
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+let postsElement=props.posts.map(posts=>(<div key={posts.id}>
+    {posts.message}
+    Likes:{posts.like}
+</div>))
     return <div>
-       <div>
-       </div>
         <div>
             New posts
         </div>
-        <Posts message='Hi are you? 'like='10'/>
-        <Posts message='Its my first post 'like='33'/>
+       {postsElement}
+       
     </div>
 }
 export default MyPosts
