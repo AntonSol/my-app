@@ -19,7 +19,7 @@ function App(props) {
       <div className='app-wrapper-cont'>
         <Routes>
         <Route path='/news' element={<News/>}/>
-        <Route path='/messages' element={<Dialogs/>}/>
+        <Route path='/messages' element={<Dialogs messagesData={props.messagesData} dialogsData={props.dialogsData} />}/>
         <Route path='/profile' element={<Profile posts={props.posts}/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/musik' element={<Musik/>}/>
