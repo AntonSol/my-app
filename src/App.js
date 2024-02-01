@@ -19,8 +19,8 @@ function App(props) {
       <div className='app-wrapper-cont'>
         <Routes>
         <Route path='/news' element={<News/>}/>
-        <Route path='/messages' element={<Dialogs messagesData={props.messagesData} dialogsData={props.dialogsData} />}/>
-        <Route path='/profile' element={<Profile posts={props.posts}/>}/>
+        <Route path='/messages' element={<Dialogs messagesData={props.state.messagePage.messagesData} dialogsData={props.state.messagePage.dialogsData} />}/>
+        <Route path='/profile' element={<Profile posts={props.state.profilePage.posts}/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/musik' element={<Musik/>}/>
         </Routes>
