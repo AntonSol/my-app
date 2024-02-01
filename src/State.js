@@ -7,15 +7,19 @@ let state={
           ],
     },
     messagePage:{    
-    dialogsData:[
-        {id:0,name:'Toha'},
-        {id:1,name:'Biba'},
-        {id:2,name:'Trololo'},
+         dialogsData:[
+             {id:0,name:'Toha'},
+             {id:1,name:'Biba'},
+             {id:2,name:'Trololo'},
       ],
-    messagesData:[
-        {id:0,message:'Hi'},
-        {id:1,message:'I am Anton'},
-        {id:2,message:'QQ'},
-      ],}
+         messagesData:[
+             {id:0,message:'Hi'},
+             {id:1,message:'I am Anton'},
+             {id:2,message:'QQ'},
+      ],},
+    sidebar:[
+        
+    ]
+
 }
 export default state; 
