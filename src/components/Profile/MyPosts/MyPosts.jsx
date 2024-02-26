@@ -6,9 +6,9 @@ let postsElement=props.posts.map(posts=>(<div><div className={styles.post}>
     <div className={styles.likes}> Likes:{posts.like}</div>
 </div>))
 let newPostElement=React.createRef()
-let newPost=()=>{
+let addPost=()=>{
    let text=newPostElement.current.value
-    alert(text)
+    props.addPost(text)
 } 
     
     return <div>
@@ -16,7 +16,7 @@ let newPost=()=>{
         <div>
             <textarea ref={newPostElement}></textarea>
             <div>
-                <button onClick={newPost}> Add post</button>
+                <button onClick={addPost}> Add post</button>
             </div>
         </div>
        {postsElement}

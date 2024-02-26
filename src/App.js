@@ -20,7 +20,7 @@ function App(props) {
         <Routes>
         <Route path='/news' element={<News/>}/>
         <Route path='/messages' element={<Dialogs messagesData={props.state.messagePage.messagesData} dialogsData={props.state.messagePage.dialogsData} />}/>
-        <Route path='/profile' element={<Profile posts={props.state.profilePage.posts}/>}/>
+        <Route path='/profile' element={<Profile posts={props.state.profilePage.posts} addPost={props.addPost}/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/musik' element={<Musik/>}/>
         </Routes>
