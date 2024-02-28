@@ -6,7 +6,8 @@ let state={
             {id:0, message:'Hi are you? ', like:121},
             {id:1, message:'Its my first post ', like:1},
             {id:2, message:'YOU ', like:15},
-          ],
+        ],
+        newPostText:'zgarova'
     },
     messagePage:{    
          dialogsData:[
