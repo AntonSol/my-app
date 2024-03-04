@@ -1,17 +1,20 @@
 import React from "react";
 import styles from './MyPosts.module.css'
+
 const MyPosts = (props) => {
 let postsElement=props.posts.map(posts=>(<div><div className={styles.post}>
     {posts.message}</div>
     <div className={styles.likes}> Likes:{posts.like}</div>
 </div>))
 let newPostElement=React.createRef()
-let addPost=()=>{
-   let text=newPostElement.current.value
-    props.addPost(text)
-} 
-let onPostChange=()=>{
 
+let addPost=()=>{
+    props.addPost();
+} 
+
+let onPostChange=()=>{
+let text=newPostElement.current.value;
+props.updateNewPostText(text)
 }
 
     return <div>
