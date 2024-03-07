@@ -40,4 +40,7 @@ export let updateNewPostText=(newText)=>{
   state.profilePage.newPostText=newText;
   renderEntireTree(state)
 }
+export const subscribe=(observer)=>{
+  renderEntireTree=observer
+}
 export default state; 
