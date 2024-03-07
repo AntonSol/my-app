@@ -2,8 +2,9 @@ let renderEntireTree=()=>{
     console.log('qqq')
 }
 
-let state={
-    profilePage:{
+let store={
+    state:{
+        profilePage:{
         posts:[
             {id:0, message:'Hi are you? ', like:121},
             {id:1, message:'Its my first post ', like:1},
@@ -11,35 +12,40 @@ let state={
         ],
         newPostText:'zgarova'
     },
-    messagePage:{    
-         dialogsData:[
-             {id:0,name:'Toha'},
-             {id:1,name:'Biba'},
-             {id:2,name:'Trololo'},
+        messagePage:{    
+           dialogsData:[
+               {id:0,name:'Toha'},
+               {id:1,name:'Biba'},
+               {id:2,name:'Trololo'},
       ],
-         messagesData:[
-             {id:0,message:'Hi'},
-             {id:1,message:'I am Anton'},
-             {id:2,message:'QQ'},
+           messagesData:[
+               {id:0,message:'Hi'},
+               {id:1,message:'I am Anton'},
+               {id:2,message:'QQ'},
       ],},
-    sidebar:[
+        sidebar:[
         
-    ]
+       ]},
+    _addPost:addPost=()=>{
+        let newPost={
+            id:5,
+            message: state.profilePage.newPostText,
+            likesCount:0,
+        }
+        state.profilePage.posts.push(newPost);
+        state.profilePage.newPostText='';
+        renderEntireTree(state)
+    },
+    _updateNewPostText:updateNewPostText=(newText)=>{
+        state.profilePage.newPostText=newText;
+        renderEntireTree(state)
+      },
+
+
 }
-export let addPost=()=>{
-    let newPost={
-        id:5,
-        message: state.profilePage.newPostText,
-        likesCount:0,
-    }
-    state.profilePage.posts.push(newPost);
-    state.profilePage.newPostText='';
-    renderEntireTree(state)
-}
-export let updateNewPostText=(newText)=>{
-  state.profilePage.newPostText=newText;
-  renderEntireTree(state)
-}
+
+
+
 export const subscribe=(observer)=>{
   renderEntireTree=observer
 }
