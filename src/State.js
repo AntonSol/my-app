@@ -1,9 +1,7 @@
-let renderEntireTree=()=>{
-    console.log('qqq')
-}
+
 
 let store={
-    state:{
+    _state:{
         profilePage:{
         posts:[
             {id:0, message:'Hi are you? ', like:121},
@@ -26,27 +24,35 @@ let store={
         sidebar:[
         
        ]},
-    _addPost:addPost=()=>{
+    getState(){
+        return this._state
+    },   
+    renderEntireTree () {
+      console.log('qqq')
+    },
+    
+    
+    addPost(){
         let newPost={
             id:5,
-            message: state.profilePage.newPostText,
+            message: this._state.profilePage.newPostText,
             likesCount:0,
         }
-        state.profilePage.posts.push(newPost);
-        state.profilePage.newPostText='';
-        renderEntireTree(state)
+        this._state.profilePage.posts.push(newPost);
+        this._state.profilePage.newPostText='';
+        this.renderEntireTree(this._state)
     },
-    _updateNewPostText:updateNewPostText=(newText)=>{
-        state.profilePage.newPostText=newText;
-        renderEntireTree(state)
-      },
-
+    updateNewPostText(newText){
+        this._state.profilePage.newPostText=newText;
+        this.renderEntireTree(this._state)
+    },
+    subscribe (observer) {
+        this.renderEntireTree=observer
+    }
 
 }
 
 
 
-export const subscribe=(observer)=>{
-  renderEntireTree=observer
-}
-export default state; 
+
+export default store; 
